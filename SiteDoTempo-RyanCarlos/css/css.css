@@ -1,0 +1,76 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url("../images/bg-hw-dark.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+#logo{
+	width: 105px;
+}
+.atual{
+	width: 100%;
+	height: 90px;
+	margin-top: 35px;
+}
+.card{
+	margin-top: 20px;
+}
+.icone-temp{
+	width: 42px;
+	height: 42px;
+}
+.card-config .tempo-atual{
+	margin-top: 35px;
+	margin-bottom: 0;
+}
+.card-config .min-max{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.config-content{
+	margin-bottom: 15px;
+}
+#config-title-icone-temp{
+	margin: 0;
+	color: #039be5;
+}
+.card-config{
+	width: 100%;
+	height: 180px;
+	color: #fff;
+	transition-property: background;
+	transition-duration: 2s;
+}
+#c_in{
+	padding-right: 35px;
+}
+#autocomplete-input{
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 5px 5px;
+	margin-top: 35px;
+}
+.titles-padding-bottom{
+	padding-bottom: 0 !important;
+}
+.titles-padding-bottom-top{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.page-footer{
+	padding-top: 10px !important;
+}
+.pd{
+	width: 100%;
+	height: 300px;
+}
+.config-icons{
+	margin-top: 0.2px;
+	width: 30px;
+	height: 30px;
+}
+.collapsible-body{
+	background: #fff;
+}

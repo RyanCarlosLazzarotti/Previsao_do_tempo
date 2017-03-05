@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Site do Tempo</title>
+
+		<!--Metas-->
+		<meta charset="UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="images/png" href="images/gota.png"/><!--Icone da aba-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!--css-->
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+	</head>
+
+	<body>
+		<nav class="light-blue orange lighten-1">
+			<div class="container">
+		    	<div class="nav-wrapper">
+		      		<img src="images/logo.png" id="logo"><a class="brand-logo">Site do Tempo</a>
+		    	</div>
+			</div>
+		 </nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="input-field col s12" id="c_in">
+					<input type="text" placeholder="Pesquise pela sua cidade..." id="autocomplete-input" class="autocomplete">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="card hoverable">
+					<div class="card-config waves-effect waves-block waves-light">
+							<div class="row">
+								<div class="col s12 center">
+									<h3 class="tempo-atual activator"></h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 center">
+									<h5 class="min-max activator"></h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 center">
+									<span id="data"></span>
+								</div>
+							</div>
+				    </div>
+				    <div class="card-content">
+						<span class="activator card-title grey-text text-darken-4">Tempo atual<i class="material-icons right">more_vert</i></span>
+						<p><a class="cidade">cidade</a></p>
+				    </div>
+				    <div class="card-reveal">
+						<span class="config-content card-title grey-text text-darken-4">Tempo atual<i class="material-icons right">close</i></span>
+						<div class="row">
+							<div class="col s3 center">
+								<a>Temperatura autal</a>
+								<p class="tempo-atual"></p>
+							</div>
+							<div class="col s3 center">
+								<a>Mínima e máxima</a>
+								<p class="min-max"></p>
+							</div>
+							<div class="col s3 center">
+								<a>Cidade</a>
+								<p class="cidade"></p>
+							</div>
+							<div class="col s3 center">
+								<a>Pressão</a>
+								<p id="press"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s3 center">
+								<a>Velocidade dos ventos</a>
+								<p id="vel-vento"></p>
+							</div>
+							<div class="col s3 center">
+								<a>Humidade</a>
+								<p id="humidade"></p>
+							</div>
+							<div class="col s3 center">
+								<a>Condição do tempo</a>
+								<p id="cond-temp"></p>
+							</div>
+							<div class="col s3 center">
+								<p id="config-title-icone-temp">Como está o dia</p>
+								<img class="icone-temp">
+							</div>
+						</div>
+				    </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="card horizontal orange">
+					<div class="card-stacked">
+						<div class="card-action">
+							<sapn class="col s12 center" style="color: #fff">Próximos 5 dias</span>
+						</div>
+					</div>
+				</div>
+				<ul class="collection">
+					<li class="collection-item avatar">
+						<i class="material-icons circle light-blue darken-1">cloud</i>
+						<a class="title"><p id="data-1">data</p></a>
+						<a>Média: <span id="media-1">Média</span></a><br>
+						<a>Humidade: <span id="humidade-1">humidade</span></a>
+						<a href="#modal-1" class="secondary-content modal-trigger"><i class="material-icons">more_vert</i></a>
+						<div id="modal-1" class="modal">
+							<div class="modal-content">
+								<h4>Detalhes da previsão</h4>
+								<div class="row">
+									<div class="col s3 center">
+										<a>Mínima e máxima</a>
+										<p id="min-max-1"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Pressão</a>
+										<p id="press-1"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Condição do tempo</a>
+										<p id="cond-temp-1"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Como está o dia</a>
+										<img id="icon-1"></img>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a class="modal-action modal-close waves-effect btn-flat light-blue darken-1">Fechar</a>
+							</div>
+						</div>
+					</li>
+					<li class="collection-item avatar">
+						<i class="material-icons circle yellow darken-2">filter_drama</i>
+						<a class="title"><p id="data-2">data</p></a>
+						<a>Média: <span id="media-2">Média</span></a><br>
+						<a>Humidade: <span id="humidade-2">humidade</span></a>
+						<a href="#modal-2" class="secondary-content modal-trigger"><i class="material-icons">more_vert</i></a>
+						<div id="modal-2" class="modal">
+							<div class="modal-content">
+								<h4>Detalhes da previsão</h4>
+								<div class="row">
+									<div class="col s3 center">
+										<a>Mínima e máxima</a>
+										<p id="min-max-2"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Pressão</a>
+										<p id="press-2"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Condição do tempo</a>
+										<p id="cond-temp-2"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Como está o dia</a>
+										<img id="icon-2"></img>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a class="modal-action modal-close waves-effect btn-flat yellow darken-2">Fechar</a>
+							</div>
+						</div>
+					</li>
+					<li class="collection-item avatar">
+						<i class="material-icons circle green darken-1">cloud</i>
+						<a class="title"><p id="data-3">data</p></a>
+						<a>Média: <span id="media-3">Média</span></a><br>
+						<a>Humidade: <span id="humidade-3">humidade</span></a>
+						<a href="#modal-3" class="secondary-content modal-trigger"><i class="material-icons">more_vert</i></a>
+						<div id="modal-3" class="modal">
+							<div class="modal-content">
+								<h4>Detalhes da previsão</h4>
+								<div class="row">
+									<div class="col s3 center">
+										<a>Mínima e máxima</a>
+										<p id="min-max-3"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Pressão</a>
+										<p id="press-3"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Condição do tempo</a>
+										<p id="cond-temp-3"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Como está o dia</a>
+										<img id="icon-3"></img>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a class="modal-action modal-close waves-effect btn-flat green darken-1">Fechar</a>
+							</div>
+						</div>
+					</li>
+					<li class="collection-item avatar">
+						<i class="material-icons circle red darken-2">filter_drama</i>
+						<a class="title"><p id="data-4">data</p></a>
+						<a>Média: <span id="media-4">Média</span></a><br>
+						<a>Humidade: <span id="humidade-4">humidade</span></a>
+						<a href="#modal-4" class="secondary-content modal-trigger"><i class="material-icons">more_vert</i></a>
+						<div id="modal-4" class="modal">
+							<div class="modal-content">
+								<h4>Detalhes da previsão</h4>
+								<div class="row">
+									<div class="col s3 center">
+										<a>Mínima e máxima</a>
+										<p id="min-max-4"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Pressão</a>
+										<p id="press-4"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Condição do tempo</a>
+										<p id="cond-temp-4"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Como está o dia</a>
+										<img id="icon-4"></img>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a class="modal-action modal-close waves-effect btn-flat red darken-2">Fechar</a>
+							</div>
+						</div>
+					</li>
+					<li class="collection-item avatar">
+						<i class="material-icons circle orange accent-4">cloud</i>
+						<a class="title"><p id="data-5">data</p></a>
+						<a>Média: <span id="media-5">Média</span></a><br>
+						<a>Humidade: <span id="humidade-5">humidade</span></a>
+						<a href="#modal-5" class="secondary-content modal-trigger"><i class="material-icons">more_vert</i></a>
+						<div id="modal-5" class="modal">
+							<div class="modal-content">
+								<h4>Detalhes da previsão</h4>
+								<div class="row">
+									<div class="col s3 center">
+										<a>Mínima e máxima</a>
+										<p id="min-max-5"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Pressão</a>
+										<p id="press-5"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Condição do tempo</a>
+										<p id="cond-temp-5"></p>
+									</div>
+									<div class="col s3 center">
+										<a>Como está o dia</a>
+										<img id="icon-5"></img>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a class="modal-action modal-close waves-effect btn-flat orange accent-4">Fechar</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<footer class="page-footer  amber lighten-1">
+      		<div class="footer-copyright">
+	            <div class="container">©2016 Copyright | Ryan Carlos
+	            	<a class="grey-text text-lighten-4 right"><img src="images/face.png"><img src="images/gmail.png"><img src="images/twitter.png"></a>
+	            </div>
+    		</div>
+		</footer>
+	</body>
+
+	<!--script-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</html>
